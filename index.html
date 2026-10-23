@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PathFinder | Career Guidance</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark">✦</span><span>PathFinder<small>CAREER GUIDANCE & EXPLORATION</small></span></a>
+  <nav><a href="#choose">Choose Stream</a><a href="#explore">Explore Careers</a><a href="#roadmap">Roadmap</a></nav>
+  <a class="top-cta" href="#choose">Start Exploring ↗</a>
+</header>
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow"><span></span> MADE FOR CLASS 11 STUDENTS</div>
+    <h1>Your stream.<br><em>Your possibilities.</em></h1>
+    <p>Discover careers you can work towards from your Class 11 stream. Explore government jobs, defence, private companies, business, research and creative careers—all in one place.</p>
+    <div class="hero-actions"><a class="btn primary" href="#choose">Choose Your Stream <b>↓</b></a><a class="btn light" href="#roadmap">How it works</a></div>
+    <div class="trust-line"><span>✓</span> Explore options before you decide</div>
+  </div>
+  <div class="hero-visual">
+    <div class="visual-ring ring-one"></div><div class="visual-ring ring-two"></div>
+    <div class="big-compass">🧭</div>
+    <div class="floating float-top"><span>🎯</span><div><b>Find your direction</b><small>Based on your subjects</small></div></div>
+    <div class="floating float-bottom"><span>🗺️</span><div><b>Explore pathways</b><small>Step by step</small></div></div>
+    <div class="orbit-label label-left">Government</div><div class="orbit-label label-right">Defence</div>
+  </div>
+</section>
+<section class="mini-stats">
+ <div><b>3</b><span>Main school streams</span></div><div><b>6</b><span>Career sectors</span></div><div><b>25+</b><span>Career ideas to explore</span></div><div><b>Step-by-step</b><span>Pathway information</span></div>
+</section>
+<section id="choose" class="section">
+  <div class="section-heading"><span class="eyebrow-text">STEP 01 · START WITH YOUR STREAM</span><h2>What are you studying in Class 11?</h2><p>Choose your stream first. Then select your subject combination to get more relevant career suggestions.</p></div>
+  <div class="stream-grid">
+  
+    <button class="stream-card" data-stream="science">
+      <span class="stream-icon science">⚗️</span>
+      <span class="stream-title">Science</span><span class="stream-desc">Explore careers in technology, healthcare, engineering, research and more.</span><span class="card-link">Explore this stream <b>↗</b></span>
+    </button>
+  
+    <button class="stream-card" data-stream="commerce">
+      <span class="stream-icon commerce">📊</span>
+      <span class="stream-title">Commerce</span><span class="stream-desc">Explore finance, accounting, management, law, business and analytics.</span><span class="card-link">Explore this stream <b>↗</b></span>
+    </button>
+  
+    <button class="stream-card" data-stream="humanities">
+      <span class="stream-icon humanities">🎭</span>
+      <span class="stream-title">Humanities / Arts</span><span class="stream-desc">Explore law, civil services, media, education, design, social sciences and more.</span><span class="card-link">Explore this stream <b>↗</b></span>
+    </button>
+  
+  </div>
+  <div id="subjectPanel" class="subject-panel hidden">
+    <div class="subject-head"><div><span class="eyebrow-text">STEP 02 · SUBJECT COMBINATION</span><h3 id="subjectTitle">Choose your subjects</h3><p>Choose the option closest to your school subjects.</p></div><button id="changeStream" class="text-button">Change stream</button></div>
+    <div id="subjectOptions" class="subject-options"></div>
+    <button id="continueBtn" class="btn primary" disabled>Show career opportunities <b>→</b></button>
+  </div>
+</section>
+<section class="sector-section">
+ <div class="section-heading"><span class="eyebrow-text">STEP 03 · EXPLORE BY SECTOR</span><h2>One stream. Many directions.</h2><p>Careers can lead to very different workplaces. Select a sector after choosing your subjects.</p></div>
+ <div class="sector-grid">
+ 
+ <button class="sector-chip" data-sector="government"><span>🏛️</span><b>Government Sector</b><small>Public service, administration and government departments</small></button>
+ 
+ <button class="sector-chip" data-sector="defence"><span>🛡️</span><b>Defence &amp; Uniformed Services</b><small>Armed forces and other uniformed services</small></button>
+ 
+ <button class="sector-chip" data-sector="private"><span>🏢</span><b>Private Sector</b><small>Companies, organisations and professional roles</small></button>
+ 
+ <button class="sector-chip" data-sector="commercial"><span>📊</span><b>Business &amp; Commercial</b><small>Finance, accounting, trade and management</small></button>
+ 
+ <button class="sector-chip" data-sector="research"><span>🔬</span><b>Research &amp; Education</b><small>Research, teaching, science and knowledge</small></button>
+ 
+ <button class="sector-chip" data-sector="self"><span>🚀</span><b>Self-employment &amp; Creative</b><small>Independent practice, freelancing and entrepreneurship</small></button>
+ 
+ </div>
+</section>
+<section id="explore" class="results-section">
+ <div class="section-heading"><span class="eyebrow-text">YOUR CAREER EXPLORER</span><h2>Explore your possibilities</h2><p>Career suggestions update based on your selected stream, subjects and sector.</p></div>
+ <div class="results-toolbar">
+   <div class="selection-summary"><span class="summary-icon">🧭</span><div><b id="selectionTitle">Choose a stream to begin</b><small id="selectionSubtitle">Your matching careers will appear here.</small></div></div>
+   <div class="search-wrap"><span>⌕</span><input id="searchInput" type="search" placeholder="Search careers..." aria-label="Search careers"></div>
+ </div>
+ <div class="filter-row"><span>FILTER BY SECTOR</span><div id="sectorFilters" class="filter-pills"><button class="filter-pill active" data-sector="all">All sectors</button><button class="filter-pill" data-sector="government">Government Sector</button><button class="filter-pill" data-sector="defence">Defence &amp; Uniformed Services</button><button class="filter-pill" data-sector="private">Private Sector</button><button class="filter-pill" data-sector="commercial">Business &amp; Commercial</button><button class="filter-pill" data-sector="research">Research &amp; Education</button><button class="filter-pill" data-sector="self">Self-employment &amp; Creative</button></div></div>
+ <div id="careerGrid" class="career-grid"><div class="empty-state"><div>🧭</div><h3>Your career journey starts here</h3><p>Choose a Class 11 stream and subject combination above to see possible careers.</p></div></div>
+ <p class="result-note">Career matches are educational suggestions, not an eligibility guarantee. Always verify the latest rules on official exam, college and recruitment websites.</p>
+</section>
+<section id="roadmap" class="roadmap-section">
+ <div class="section-heading"><span class="eyebrow-text">STEP 04 · MAKE A PLAN</span><h2>From stream to a career plan</h2><p>Use these four steps to turn your curiosity into a practical next step.</p></div>
+ <div class="roadmap-grid"><article><span>01</span><h3>Explore</h3><p>Find professions you did not know about and compare more than one option.</p></article><article><span>02</span><h3>Check eligibility</h3><p>Confirm subjects, minimum marks, age, medical rules and entrance requirements.</p></article><article><span>03</span><h3>Understand the route</h3><p>Find out which course, exam, training or qualification comes next.</p></article><article><span>04</span><h3>Ask and prepare</h3><p>Talk to a teacher or counsellor, verify official information and make a study plan.</p></article></div>
+ <div class="notice"><span>💡</span><div><b>Remember: your stream does not decide your whole future.</b><p>Some careers need particular subjects or qualifications, while other paths remain open to students from different streams. Always check the requirements for the exact course or post.</p></div></div>
+</section>
+</main>
+<footer><div class="footer-brand"><span class="brand-mark">✦</span><div><b>PathFinder</b><small>Career Guidance & Exploration Website</small></div></div><p>Created as a Class 11 school project.</p><p class="footer-disclaimer">Information is for general educational guidance. Rules can change and vary by course, institution, service and recruitment notification. Use official sources for final decisions.</p></footer>
+<div id="modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-card"><button id="closeModal" class="modal-close" aria-label="Close">×</button><div id="modalContent"></div></div></div>
+<script>
+window.PATHFINDER_STREAMS = [{&#34;id&#34;: &#34;science&#34;, &#34;name&#34;: &#34;Science&#34;, &#34;tagline&#34;: &#34;Explore careers in technology, healthcare, engineering, research and more.&#34;, &#34;subjects&#34;: [{&#34;id&#34;: &#34;pcm&#34;, &#34;name&#34;: &#34;PCM&#34;, &#34;detail&#34;: &#34;Physics, Chemistry, Mathematics&#34;}, {&#34;id&#34;: &#34;pcb&#34;, &#34;name&#34;: &#34;PCB&#34;, &#34;detail&#34;: &#34;Physics, Chemistry, Biology&#34;}, {&#34;id&#34;: &#34;pcmb&#34;, &#34;name&#34;: &#34;PCMB&#34;, &#34;detail&#34;: &#34;Physics, Chemistry, Mathematics, Biology&#34;}, {&#34;id&#34;: &#34;science_other&#34;, &#34;name&#34;: &#34;Other Science combination&#34;, &#34;detail&#34;: &#34;Check your school&#39;s exact subject combination&#34;}]}, {&#34;id&#34;: &#34;commerce&#34;, &#34;name&#34;: &#34;Commerce&#34;, &#34;tagline&#34;: &#34;Explore finance, accounting, management, law, business and analytics.&#34;, &#34;subjects&#34;: [{&#34;id&#34;: &#34;commerce_maths&#34;, &#34;name&#34;: &#34;Commerce with Mathematics&#34;, &#34;detail&#34;: &#34;Accountancy, Business Studies, Economics and Mathematics&#34;}, {&#34;id&#34;: &#34;commerce_applied&#34;, &#34;name&#34;: &#34;Commerce with Applied Mathematics&#34;, &#34;detail&#34;: &#34;Commerce subjects with Applied Mathematics&#34;}, {&#34;id&#34;: &#34;commerce_no_maths&#34;, &#34;name&#34;: &#34;Commerce without Mathematics&#34;, &#34;detail&#34;: &#34;Commerce subjects without Mathematics&#34;}]}, {&#34;id&#34;: &#34;humanities&#34;, &#34;name&#34;: &#34;Humanities / Arts&#34;, &#34;tagline&#34;: &#34;Explore law, civil services, media, education, design, social sciences and more.&#34;, &#34;subjects&#34;: [{&#34;id&#34;: &#34;humanities_pol&#34;, &#34;name&#34;: &#34;Political Science / History&#34;, &#34;detail&#34;: &#34;Humanities subjects such as Political Science and History&#34;}, {&#34;id&#34;: &#34;humanities_economics&#34;, &#34;name&#34;: &#34;Economics / Geography&#34;, &#34;detail&#34;: &#34;Humanities with Economics, Geography or related subjects&#34;}, {&#34;id&#34;: &#34;humanities_psych&#34;, &#34;name&#34;: &#34;Psychology / Sociology&#34;, &#34;detail&#34;: &#34;Human behaviour, society and related subjects&#34;}, {&#34;id&#34;: &#34;humanities_visual&#34;, &#34;name&#34;: &#34;Fine Arts / Media / Languages&#34;, &#34;detail&#34;: &#34;Creative, language and communication subjects&#34;}, {&#34;id&#34;: &#34;humanities_other&#34;, &#34;name&#34;: &#34;Other Humanities combination&#34;, &#34;detail&#34;: &#34;Choose based on your school&#39;s subject combination&#34;}]}];
+window.PATHFINDER_SECTORS = [{&#34;id&#34;: &#34;government&#34;, &#34;name&#34;: &#34;Government Sector&#34;, &#34;icon&#34;: &#34;🏛️&#34;, &#34;desc&#34;: &#34;Public service, administration and government departments&#34;}, {&#34;id&#34;: &#34;defence&#34;, &#34;name&#34;: &#34;Defence &amp; Uniformed Services&#34;, &#34;icon&#34;: &#34;🛡️&#34;, &#34;desc&#34;: &#34;Armed forces and other uniformed services&#34;}, {&#34;id&#34;: &#34;private&#34;, &#34;name&#34;: &#34;Private Sector&#34;, &#34;icon&#34;: &#34;🏢&#34;, &#34;desc&#34;: &#34;Companies, organisations and professional roles&#34;}, {&#34;id&#34;: &#34;commercial&#34;, &#34;name&#34;: &#34;Business &amp; Commercial&#34;, &#34;icon&#34;: &#34;📊&#34;, &#34;desc&#34;: &#34;Finance, accounting, trade and management&#34;}, {&#34;id&#34;: &#34;research&#34;, &#34;name&#34;: &#34;Research &amp; Education&#34;, &#34;icon&#34;: &#34;🔬&#34;, &#34;desc&#34;: &#34;Research, teaching, science and knowledge&#34;}, {&#34;id&#34;: &#34;self&#34;, &#34;name&#34;: &#34;Self-employment &amp; Creative&#34;, &#34;icon&#34;: &#34;🚀&#34;, &#34;desc&#34;: &#34;Independent practice, freelancing and entrepreneurship&#34;}];
+</script>
+<script src="app.js"></script>
+</body>
+</html>
